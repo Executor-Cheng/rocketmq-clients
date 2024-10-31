@@ -30,5 +30,5 @@ jobs:
       - name: Upload binary files
         uses: actions/upload-artifact@v4
         with:
-          name: blah
+          name: blah_${{ matrix.os }}
           path: ./csharp/examples/bin/Release/
