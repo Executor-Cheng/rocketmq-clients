@@ -23,7 +23,12 @@ jobs:
       - name: Build artifacts
         working-directory: ./csharp
         run: |
-          dotnet build
+          dotnet build -c Release
           dotnet tool install -g dotnet-format
           dotnet-format --check
           dotnet test -l "console;verbosity=detailed"
+      - name: Upload binary files
+        uses: actions/upload-artifact@v4
+        with:
+          name: blah
+          path: ./csharp/examples/bin/Release/
