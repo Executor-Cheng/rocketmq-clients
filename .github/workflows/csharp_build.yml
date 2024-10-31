@@ -30,5 +30,5 @@ jobs:
       - name: Upload binary files
         uses: actions/upload-artifact@v4
         with:
-          name: blah_${{ matrix.os }}
-          path: ./csharp/examples/bin/Release/
+          name: artifacts_${{ matrix.os }}
+          path: ./csharp/rocketmq-client-csharp/bin/Release/
